@@ -1,0 +1,82 @@
+  .slider-thumbs{display:flex;color:yellow;position: absolute;z-index: 2;}
+        li{color:white;}
+        body{
+            background-image: url("../images/Background.jpg");
+        }
+        .slider,.slider,.slider3{
+            
+            /*background-image: linear-gradient(to right, #09052f 0%, #311d5e 100%);*/
+            background-image: url("../images/trees.jpg") ;
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+            display: flex;
+                 justify-content: center;
+                 text-align: center;
+            /*opacity: 0.85;*/
+           opacity: 1;
+      transition: all 1s linear;
+        }
+        .slider,.slider3{
+            position:absolute;
+            top:0;
+            opacity: 0;
+      transition: all 1s linear;
+        }
+        .linear{
+            width: 100vw;
+            height: 100vh;
+             background-image: linear-gradient(to right, #09052f 0%, #311d5e 100%);
+                 opacity: 0.85;
+                 display: flex;
+                 justify-content: center;
+                    }
+        .Text_Logo{
+            /*width: 510px;*/
+            /*height: 31px;*/
+            color: #ffffff;
+            font-family: "Playfair Display - Black";
+            font-size: 32px;
+            font-weight: 400;
+            width: 100vw;
+            letter-spacing: 0.32px;
+            /*padding-top:50vh;*/
+            margin: 0;
+            padding: 0;
+            padding-top: 1vw;
+            }   
+            .line{width: 50px;height:2px;background-color: #3fc; margin-top: 1vw;}
+            .box-header{display: flex;justify-content: center;text-align:center;align-content: center;flex-direction: column;}
+            .Text_Content{
+                width:50vw;
+                padding-top: 1vw;
+                color: #ffffff;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 24px;
+                
+                letter-spacing: 0.7px;
+                justify-content: center;text-align:center;align-content: center;flex-direction: column;
+            }
+           #Learnbtn{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-content: center;
+                flex-direction: column;
+                width: 100px;
+                margin-top:10vh;
+                
+            }
+           .nav{
+               display: flex;
+               justify-content: space-between;
+           }
+           li{
+               border:10px solid #3fc;
+               list-style: none;    
+               border-radius:50%;
+              }
+           .active{
+      opacity: 1;z-index: 2;
+    }

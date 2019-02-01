@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!doctype html><html>
+   <head>
+<meta charset="UTF-8">
+  	<title>Matching Face. Game</title>
+   </head>
+   <body class="b1"onload="Start()">
+<style>
+    body {
+      text-align: center;
+      white-space: nowrap;
+      background-color: #18c;
+      color:white;
+    }
+
+    img {      position: absolute;    }
+
+    div[id*='Side'] {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      display: inline-block;
+      border: 1px solid black;
+      background-color: #c73;
+    }
+
+    #rightSide {
+      border: 0;
+    }
+  </style>
+
+	<h1 id="h1">Matching Face Game!(20.01.2019)</h1>
+  <h2 id="h02">Free version:</h2>
+<h2 id="h2">Click on the extra smiling face on the left.</h2>
+<h3 id="h3">Level: 0</h3>
+<h3 id="h4">Max Level: 0</h3>
+<div id="leftSide"></div>
+<div id="rightSide"></div>
+<h3 id="h5">Your points: 0$</h3>
+<audio autoplay loop>
+  <source src="MusicBegin.mp3" >
+ </audio>
+<!-- <embed src="Sound_08428.mp3" type="audio/mpeg" hidden="true" autostart="true" loop="true" volume="80"></embed> -->
+<script>
+var maxFaces=  3;
+
+var theLeftSide=document.getElementById("leftSide");  
+var theRightSide=document.getElementById("rightSide");    
+var lev=0;
+var max=0;
+var points=0;
+var sum=10;
+var e=document.querySelector('audio');
+var newt=setInterval(prog,1000);
+function Start()
+{
+ var numb=0;
+ while(numb<maxFaces)
+ {
+     var x=Math.round(Math.random()*400);
+    var y=Math.round(Math.random()*400);
+ var thisFace = document.createElement("img");
+ thisFace.style.left=x+"px";
+ thisFace.style.top=y+"px";
+ thisFace.src="https://img.icons8.com/office/40/000000/happy.png";
+ var fragment = document.createDocumentFragment();
+ fragment.appendChild(thisFace);
+ theLeftSide.appendChild(fragment);
+ numb++;
+ }   
+  var Clone=theLeftSide.cloneNode(true);
+    Clone.removeChild(Clone.lastChild);
+    document.getElementById("rightSide").appendChild(Clone);
+    
+  
+    function nextLevel(event) {
+        		while (theLeftSide.firstChild) {
+          			theLeftSide.removeChild(theLeftSide.firstChild);
+        		}
+        	while (theRightSide.firstChild) {
+          			theRightSide.removeChild(theRightSide.firstChild);
+        		}
+                event.stopPropagation();
+                    maxFaces+=1;
+                    lev++;
+                    document.getElementById("h3").innerText="Level: "+lev;
+                    if(lev<=10)points+=sum;
+                    else if(lev>10)points+=sum*10;
+                    else if(lev>20)points+=sum*20;
+                    
+                    document.getElementById("h5").innerText="Your points: "+points+"$";
+                    Start();
+      		};
+              theLeftSide.lastChild.addEventListener("click", nextLevel);
+              theLeftSide.onclick = function gameOver() { 
+                  theLeftSide.lastChild.src='https://img.icons8.com/office/40/000000/cool.png';
+                 e.src="GameOver.mp3" ;  
+                // alert("Game Over!\nPlease, pay "+points+"$ on our credit card: 375210582910 :)");
+                // console.log("Game Over!");
+                document.getElementById("h3").innerText="Level: "+0;
+                if(lev>max)document.getElementById("h4").innerText="Max Level: "+lev;
+              theLeftSide.onclick = null;
+              theLeftSide.lastChild.onclick = null;
+                 theLeftSide.lastChild.removeEventListener("click", nextLevel);
+                  document.getElementById("h1").innerText="Game Over";
+                  document.getElementById("h02").innerText="Please, pay "+points+"$ on our credit card: 375210582910 :)";
+                  document.getElementById("h2").innerText=" ";
+                  var ax=document.querySelector(".b1");
+                  ax.style.backgroundColor="black";
+
+      };
+}
+
+</script>
+   </body>
+</html>

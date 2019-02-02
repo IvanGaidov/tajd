@@ -100,7 +100,7 @@
 
        }
        newLi[0].style.opacity='1';
-
+      
      var slider=document.querySelectorAll('.slider');
         
         
@@ -108,39 +108,42 @@
         newLi[1].addEventListener('click', func2);
         newLi[2].addEventListener('click', func3);
         newLi[3].addEventListener('click', func4);
-        
+        function Nonactive()
+       {
+          
+       }
         function func1(){
-            slider[0].classList.remove('active');
-
-            slider[1].classList.add('active');
-            let active = $.querySelector('.active');
-               newLi[0].style.opacity='0.5';
-               
-               newLi[1].style.opacity='1';
-        }
-         function func2(){
-            slider[1].classList.remove('active');
-             
-            slider[2].classList.add('active');
-            let active = $.querySelector('.active');
-newLi[1].style.opacity='0.5';
-               newLi[2].style.opacity='1';
-        }
-         function func3(){
-            slider[2].classList.remove('active');
-             
-            slider[3].classList.add('active');
-            let active = $.querySelector('.active');
-newLi[2].style.opacity='0.5';
-               newLi[3].style.opacity='1';
-        }
-         function func4(){
-            slider[3].classList.remove('active');
-             
+           
+            for(var i=0;i<4;++i)
+          { slider[i].classList.remove('active');
+           newLi[i].style.opacity='0.5';}
             slider[0].classList.add('active');
             let active = $.querySelector('.active');
-newLi[3].style.opacity='0.5';
-               newLi[0].style.opacity='1';
+            newLi[0].style.opacity='1';
+        }
+         function func2(){
+            for(var i=0;i<4;++i)
+          { slider[i].classList.remove('active');
+           newLi[i].style.opacity='0.5';}
+            slider[1].classList.add('active');
+            let active = $.querySelector('.active');
+            newLi[1].style.opacity='1';
+        }
+         function func3(){
+            for(var i=0;i<4;++i)
+          { slider[i].classList.remove('active');
+           newLi[i].style.opacity='0.5';}
+            slider[2].classList.add('active');
+            let active = $.querySelector('.active');
+            newLi[2].style.opacity='1';
+        }
+         function func4(){
+            for(var i=0;i<4;++i)
+          { slider[i].classList.remove('active');
+           newLi[i].style.opacity='0.5';}
+            slider[3].classList.add('active');
+            let active = $.querySelector('.active');
+            newLi[3].style.opacity='1';
         }
          </script>
 </body>

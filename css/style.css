@@ -1,20 +1,27 @@
-  .slider-thumbs{display:flex;color:yellow;position: absolute;z-index: 2;}
-        li{color:white;}
+#vid{ z-index: 2;width:100vw;height: 100px;display: flex; justify-content: center;}
+ .v{background-image: url("../images/play.png");width: 100px;height: 100px;} */
+.section3{display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;}
+.slider-thumbs{display:flex;color:yellow;position: absolute;z-index: 2;}
+        /* li{color:white;} */
         body{
             background-image: url("../images/Background.jpg");
         }
+        .sliders{ background-image: url("../images/trees.jpg") ;
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;}
         .slider,.slider,.slider3{
             
             /*background-image: linear-gradient(to right, #09052f 0%, #311d5e 100%);*/
-            background-image: url("../images/trees.jpg") ;
-            background-repeat: no-repeat;
-            background-size: 100vw 100vh;
+           
             display: flex;
                  justify-content: center;
                  text-align: center;
             /*opacity: 0.85;*/
            opacity: 1;
-      transition: all 1s linear;
+      transition: all 0.5s linear;
         }
         .row{display: flex;
                  justify-content: center;
@@ -30,12 +37,14 @@
             opacity: 0;
       transition: all 1s linear;
         }
-        .Story{font-family: "Playfair Display";
+        .Story,.Story2{font-family: "Playfair Display";
         font-size: 24px;
         color: #413d4b;
         text-transform: uppercase;
         letter-spacing: 1.1px;
+        /* margin-left:5px; */
         }
+        .Story2{margin-left:10px;}
         .TextSec2{
             font-family: Roboto;
 font-size: 18px;
@@ -50,12 +59,12 @@ transition: all 1s linear;
                  justify-content: center;
                     }
         .Text_Logo{
-            /*width: 510px;*/
-            /*height: 31px;*/
+            width: 510px;
+            /* height: 31px; */
             color: #ffffff;
             font-family: "Playfair Display - Black";
             font-size: 32px;
-            font-weight: 400;
+            /* font-weight: 400; */
             width: 100vw;
             letter-spacing: 0.32px;
             /*padding-top:50vh;*/
@@ -66,7 +75,8 @@ transition: all 1s linear;
             .line{width: 50px;height:2px;background-color: #3fc; margin-top: 1vw;}
             .box-header{display: flex;justify-content: center;text-align:center;align-content: center;flex-direction: column;}
             .Text_Content{
-                width:50vw;
+                width:50%;
+                height:10%;
                 padding-top: 1vw;
                 color: #ffffff;
                 font-family: Roboto;
@@ -84,7 +94,7 @@ transition: all 1s linear;
                 align-content: center;
                 flex-direction: column;
                 width: 100px;
-                margin-top:10vh;
+                margin-top:5vh;
                 
             }
              #Learnbtn2{
@@ -119,3 +129,24 @@ html{
 }
 .video{background-image: url("../images/City.jpg"); width: 100vw;height: 100vh;background-repeat: no-repeat; display: flex;background-size: 100vw 100vh;}
 /*.d1{background-image: url("../images/play.jpg");background-color: black;color:black}*/
+@media only screen and (min-width: 766px){
+.nv{display: flex;;justify-content: flex-end;}
+}
+@media only screen and (max-width: 765px){
+    .nv{display: flex;;justify-content: flex-start;}
+    .Text_Logo{
+        width: 510px;
+        /* height: 31px; */
+        color: #ffffff;
+        font-family: "Playfair Display - Black";
+        font-size: 38px;
+        /* font-weight: 400; */
+        width: 100vw;
+        letter-spacing: 0.32px;
+        /*padding-top:50vh;*/
+        margin: 0;
+        padding: 0;
+        padding-top: 1vw;
+        }   
+
+    }

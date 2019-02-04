@@ -4,11 +4,11 @@
 justify-content: center;
 align-content: center;
 align-items: center;}
-.slider-thumbs{display:flex;color:yellow;position: absolute;z-index: 2;}
+.slider-thumbs{display:flex;color:yellow;position: absolute;z-index: 2;width:100vw;height:10vh;justify-content: center;align-content: center;align-self: center;}
         /* li{color:white;} */
-        body{
-            background-image: url("../images/Background.jpg");
-        }
+        
+        section {
+            display: block;}
         .sliders{ background-image: url("../images/trees.jpg") ;
             background-repeat: no-repeat;
             background-size: 100vw 100vh;}
@@ -28,7 +28,7 @@ align-items: center;}
                  align-items: center;
                  align-content: center;
                  
-                 padding:5%;
+                 /* padding:5%; */
                 }
         .sliders{width: 100vw;height: 100vh;}
         .slider,.slider3{
@@ -129,24 +129,25 @@ html{
 }
 .video{background-image: url("../images/City.jpg"); width: 100vw;height: 100vh;background-repeat: no-repeat; display: flex;background-size: 100vw 100vh;}
 /*.d1{background-image: url("../images/play.jpg");background-color: black;color:black}*/
-@media only screen and (min-width: 766px){
+@media only screen  and (min-width:992px) and (max-width: 100vw){
 .nv{display: flex;;justify-content: flex-end;}
 }
-@media only screen and (max-width: 765px){
+/* @media only screen and (min-width: 765px){
     .nv{display: flex;;justify-content: flex-start;}
     .Text_Logo{
         width: 510px;
-        /* height: 31px; */
+        height: 31px;
         color: #ffffff;
         font-family: "Playfair Display - Black";
         font-size: 38px;
-        /* font-weight: 400; */
+        font-weight: 400;
         width: 100vw;
         letter-spacing: 0.32px;
-        /*padding-top:50vh;*/
+        padding-top:50vh;
         margin: 0;
         padding: 0;
         padding-top: 1vw;
         }   
 
-    }
+   
+.navbar{width:100vw;}  
